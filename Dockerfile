@@ -20,7 +20,7 @@ RUN apt-get -y update \
     php7.0-zip \
     php7.0-json \
     php7.0-soap \
-    mysql-server \
+    php7.0-bcmath \
     && apt-get clean \
     && rm -rf \
     /var/lib/apt/lists/* \
