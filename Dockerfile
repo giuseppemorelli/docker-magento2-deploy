@@ -21,6 +21,7 @@ RUN apt-get -y update \
     php7.0-json \
     php7.0-soap \
     php7.0-bcmath \
+    unzip \
     && apt-get clean \
     && rm -rf \
     /var/lib/apt/lists/* \
