@@ -4,23 +4,33 @@ MAINTAINER Giuseppe Morelli <info@giuseppemorelli.net>
 
 RUN apt-get -y update \
     && apt-get -y install \
-    wget \
+    apt-transport-https \
+    ca-certificates \
+    wget
+
+RUN wget -O "/etc/apt/trusted.gpg.d/php.gpg" "https://packages.sury.org/php/apt.gpg" \
+    && sh -c 'echo "deb https://packages.sury.org/php/ stretch main" > /etc/apt/sources.list.d/php.list'
+
+RUN apt-get -y update \
+    && apt-get -y install \
     git \
     curl \
-    php7.0-cli \
-    php7.0-curl \
-    php7.0-dev \
-    php7.0-gd \
-    php7.0-intl \
-    php7.0-mcrypt \
-    php7.0-mysql \
-    php7.0-mbstring \
-    php7.0-xml \
-    php7.0-xsl \
-    php7.0-zip \
-    php7.0-json \
-    php7.0-soap \
-    php7.0-bcmath \
+    php7.2 \
+    php7.2-common \
+    php7.2-cli \
+    php7.2-curl \
+    php7.2-dev \
+    php7.2-gd \
+    php7.2-intl \
+    php7.2-mysql \
+    php7.2-mbstring \
+    php7.2-xml \
+    php7.2-xsl \
+    php7.2-zip \
+    php7.2-json \
+    php7.2-xdebug \
+    php7.2-soap \
+    php7.2-bcmath \
     unzip \
     && apt-get clean \
     && rm -rf \
