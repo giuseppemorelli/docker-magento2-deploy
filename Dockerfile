@@ -32,6 +32,7 @@ RUN apt-get -y update \
     php7.2-soap \
     php7.2-bcmath \
     unzip \
+    mysql-client \
     && apt-get clean \
     && rm -rf \
     /var/lib/apt/lists/* \
