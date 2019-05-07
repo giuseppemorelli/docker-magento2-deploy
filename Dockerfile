@@ -23,6 +23,7 @@ RUN apt-get -y update \
     php7.0-bcmath \
     zip \
     mysql-client \
+    procps \
     && apt-get clean \
     && rm -rf \
     /var/lib/apt/lists/* \
