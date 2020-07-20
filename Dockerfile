@@ -31,6 +31,7 @@ RUN apt-get -y update \
     php7.2-xdebug \
     php7.2-soap \
     php7.2-bcmath \
+    php7.2-imap \
     zip \
     mysql-client \
     && apt-get clean \
