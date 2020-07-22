@@ -4,6 +4,15 @@ MAINTAINER Giuseppe Morelli <info@giuseppemorelli.net>
 
 RUN apt-get -y update \
     && apt-get -y install \
+    apt-transport-https \
+    ca-certificates \
+    wget
+
+RUN wget -O "/etc/apt/trusted.gpg.d/php.gpg" "https://packages.sury.org/php/apt.gpg" \
+    && sh -c 'echo "deb https://packages.sury.org/php/ stretch main" > /etc/apt/sources.list.d/php.list'
+
+RUN apt-get -y update \
+    && apt-get -y install \
     wget \
     git \
     curl \
