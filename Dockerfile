@@ -1,3 +1,4 @@
+# install on debian 9 for problems with lib dependency like libcurl3 (not installable on debian 10 -> we have libcurl4)
 FROM debian:stretch
 
 MAINTAINER Giuseppe Morelli <info@giuseppemorelli.net>
@@ -15,23 +16,30 @@ RUN apt-get -y update \
     && apt-get -y install \
     git \
     curl \
-    php7.2 \
-    php7.2-common \
-    php7.2-cli \
-    php7.2-curl \
-    php7.2-dev \
-    php7.2-gd \
-    php7.2-intl \
-    php7.2-mysql \
-    php7.2-mbstring \
-    php7.2-xml \
-    php7.2-xsl \
-    php7.2-zip \
-    php7.2-json \
-    php7.2-xdebug \
-    php7.2-soap \
-    php7.2-bcmath \
-    php7.2-imap \
+    php7.4 \
+    php7.4-common \
+    php7.4-cli \
+    php7.4-curl \
+    php7.4-dev \
+    php7.4-gd \
+    php7.4-intl \
+    php7.4-mysql \
+    php7.4-mbstring \
+    php7.4-xml \
+    php7.4-xsl \
+    php7.4-zip \
+    php7.4-json \
+    php7.4-xdebug \
+    php7.4-soap \
+    php7.4-bcmath \
+    php7.4-imagick	\
+    php7.4-exif	\
+    php7.4-opcache	\
+    php7.4-bcmath \
+    php7.4-ctype \
+    php7.4-dom \
+    php7.4-iconv \
+    php7.4-sockets \
     zip \
     mysql-client \
     && apt-get clean \
