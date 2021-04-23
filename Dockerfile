@@ -30,6 +30,7 @@ RUN apt-get -y update \
     php7.1-json \
     php7.1-soap \
     php7.1-bcmath \
+    php7.1-yaml \
     zip \
     mysql-client \
     procps \
