@@ -6,7 +6,9 @@ RUN apt-get -y update \
     && apt-get -y install \
     apt-transport-https \
     ca-certificates \
-    wget
+    wget \
+    curl \
+    rsync
 
 RUN apt-get -y update \
     && apt-get -y install \
